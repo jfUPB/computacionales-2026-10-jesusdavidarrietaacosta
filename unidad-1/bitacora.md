@@ -51,9 +51,8 @@ M=M+1
 0;JMP
 ```
 
-## Bitácora de reflexión
 
-### Actividad 5
+### Sustentación
 
 ```asm
 @12
@@ -87,6 +86,9 @@ M=M+1
 @END
 0;JMP
 ```
+
+
+## Bitácora de reflexión
 
 
 
