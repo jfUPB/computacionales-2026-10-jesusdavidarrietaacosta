@@ -63,4 +63,7 @@ Este programa implementa un intercambio de valores usando punteros en ensamblado
 
 
 
+
+
 ## Bitácora de reflexión
+
