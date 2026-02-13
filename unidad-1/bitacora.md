@@ -5,42 +5,80 @@
 
 ## Bitácora de aplicación 
 
-### Actividad 4
-<img width="1910" height="848" alt="image" src="https://github.com/user-attachments/assets/99f210af-6bcd-4906-9eba-525c4d99a4c7" />
+### actividad 2
+1. M=M+1
+2. indicar qué instrucción de la ROM se va a ejecutar.
+3. ambas se usan para guardar datos pero la "I" guarda los datos y @READKEYBOARD Se usa para saltar a esa parte del código
+4. se necista utilzar @KBD para el teclado y @SCREEN para la pantalla
+5.  
+@i
+D=M
+@KBD
+D=D-A
+@READKEYBOARD
+D;JGE
 
-~~~assembly
+### Actividad 4
+@12
+M=0        
+
+@i
+M=1        
+
+(LOOP)
+@i
+D=M
+@6
+D=D-A     
+@END
+D;JGE     
+
+@i
+D=M
+@12
+M=D+M    
+
+@i
+M=M+1     
+
+@LOOP
+0;JMP     
+
+(END)
+@END
+0;JMP
+
+### Actividad 5
 @12
 M=0
+
+@55
+D=A
 @i
-M=1
+M=D      
 
-
+(LOOP)
 @i
 D=M
-@i
-M=D
-@i
-D=M
-@5
+@66
 D=D-A
-
 @END
-D;JGT
+D;JGE
+
 @i
 D=M
 @12
 M=D+M
+
 @i
 M=M+1
 
 @LOOP
 0;JMP
 
-
+(END)
 @END
 0;JMP
-~~~assembly
-
 
 
 ## Bitácora de reflexión
