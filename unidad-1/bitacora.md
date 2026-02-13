@@ -2,10 +2,8 @@
 
 ## Bitácora de proceso de aprendizaje
 
-
-## Bitácora de aplicación 
-
 ### actividad 2
+
 1. M=M+1
 2. indicar qué instrucción de la ROM se va a ejecutar.
 3. ambas se usan para guardar datos pero la "I" guarda los datos y @READKEYBOARD Se usa para saltar a esa parte del código
@@ -18,7 +16,11 @@ D=D-A
 @READKEYBOARD
 D;JGE
 
+## Bitácora de aplicación 
+
 ### Actividad 4
+
+```asm
 @12
 M=0        
 
@@ -47,8 +49,13 @@ M=M+1
 (END)
 @END
 0;JMP
+```
+
+## Bitácora de reflexión
 
 ### Actividad 5
+
+```asm
 @12
 M=0
 
@@ -79,7 +86,8 @@ M=M+1
 (END)
 @END
 0;JMP
+```
 
 
-## Bitácora de reflexión
+
 
