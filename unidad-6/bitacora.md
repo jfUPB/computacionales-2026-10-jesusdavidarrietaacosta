@@ -408,6 +408,35 @@ Al momento de expandir el state podemos apreciar como este se encuentra en una d
 <img width="1673" height="876" alt="Captura de pantalla 2026-04-17 105615" src="https://github.com/user-attachments/assets/b8f3fcdb-96e8-4ff8-8931-fd3ecee02ef4" />
 <img width="1675" height="972" alt="Captura de pantalla 2026-04-17 105452" src="https://github.com/user-attachments/assets/5d0ee4ea-ad0e-4448-9ea3-b4adb4ffc647" />
 
+Evidencia 3:
+
+Press "f"
+<img width="1919" height="963" alt="image" src="https://github.com/user-attachments/assets/7a07f878-b38e-4c64-b086-dba89f59f86d" />
+
+Cuando el usuario presiona f, El switch cae en case 'f': y llama a notify("fall")
+
+Notify f
+<img width="1918" height="1032" alt="image" src="https://github.com/user-attachments/assets/a176d9c3-48a2-496d-890b-b12ee622bfc3" />
+
+Itera el vector observers (135 elementos: 100 estrellas + 5 shooting stars + 10 planetas + 20 cometas) y llama observer->onNotify("fall") en cada uno. El depurador muestra observers.size() == 135 y el string "fall" en el parámetro event.
+
+On notify
+<img width="1919" height="1029" alt="image" src="https://github.com/user-attachments/assets/f1114396-3a1a-4cd1-9666-f01a10275561" />
+<img width="1919" height="1032" alt="image" src="https://github.com/user-attachments/assets/31a5eb23-28f8-4b27-afff-27d2be9f5bd7" />
+<img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/cb4e7569-f666-4a71-8926-ae97ce9d320c" />
+
+ recepción del evento
+ La condición es true y se ejecuta setState(new FallState()). En el depurador se inspecciona this (el puntero a la partícula actual) y se confirma que es exactamente "fallstate".
+
+
+State
+<img width="1919" height="932" alt="image" src="https://github.com/user-attachments/assets/b52de081-1aab-49f1-a5ba-a60799b212d9" />
+<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/3ed98997-b523-4a68-a918-2fde0b9a790f" />
+<img width="1919" height="1033" alt="image" src="https://github.com/user-attachments/assets/8f522b4f-9345-4a2f-85b8-86a1c57b625f" />
+
+state apunta a una instancia de NormalState (o el estado previo). Se llama state->onExit(this), luego delete state. state = newState — el puntero ahora apunta al FallState recién creado. luego de inspeccionar state en el depurador muestra el vtable de FallState, confirmando el cambio de tipo.
+
+Evidencia 4:
 
 
 
